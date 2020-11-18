@@ -18,7 +18,9 @@ Rails.application.routes.draw do
 
   get "random", to: "subs#random", as: "random_sub"
 
-  resources :subs
+  resources :subs do
+    resources :topics
+  end
 
   get "users", to: "users#yoyo", as: "yoyoyoy"
 end
