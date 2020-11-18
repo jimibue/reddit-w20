@@ -5,3 +5,16 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+require "faker"
+
+Sub.destroy_all
+
+# create 3 subs and each sub has 5 topics
+3.times do
+  sub = Sub.create(name: Faker::Hacker.abbreviation)
+
+  5.times do
+    sub.topics.create(name: Faker::Hacker.adjective, body: Faker::Hacker.say_something_smart)
+  end
+end
