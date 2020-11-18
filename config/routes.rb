@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-<<<<<<< HEAD
   root "subs#index"
 
   # # index and create
@@ -20,8 +19,6 @@ Rails.application.routes.draw do
   get "random", to: "subs#random", as: "random_sub"
 
   resources :subs
-=======
 
   get "users", to: "users#yoyo", as: "yoyoyoy"
->>>>>>> 6b9a78505806df87a29c94dbdc27086584810f3d
 end
