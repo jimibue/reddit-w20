@@ -6,4 +6,8 @@ class SubsController < ApplicationController
   def show
     @sub = Sub.find(params[:id])
   end
+
+  def random
+    @sub = Sub.all.sample
+  end
 end
